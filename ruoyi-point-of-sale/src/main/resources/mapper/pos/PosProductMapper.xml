@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruoyi.pos.mapper.PosProductMapper">
+
+    <resultMap type="com.ruoyi.pos.domain.PosProduct" id="PosProductResult">
+        <id     property="pid"       column="pid"      />
+        <result     property="pname"       column="pname"      />
+        <result     property="marketPrice"       column="market_price"      />
+        <result     property="shopPrice"       column="shop_price"      />
+        <result     property="inventory"       column="inventory"      />
+        <result     property="image"       column="image"      />
+        <result     property="isHot"       column="isHot"      />
+        <result     property="pdate"       column="pdate"      />
+    </resultMap>
+	
+
+    
+    <select id="selectProductList"
+            parameterType="com.ruoyi.pos.domain.PosProduct"
+			resultMap="PosProductResult">
+		SELECT * FROM `pos_product`
+	</select>
+	
+
+	
+</mapper> 

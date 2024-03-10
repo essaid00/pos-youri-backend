@@ -1,6 +1,8 @@
-package com.ruoyi.domain;
+package com.ruoyi.pos.domain;
 
 import com.ruoyi.common.core.domain.BaseEntity;
+import lombok.Getter;
+import lombok.Setter;
 
 
 import java.util.Date;
@@ -8,21 +10,21 @@ import java.util.Date;
 /**
  * 商品的实体对象
  */
-
+@Getter
+@Setter
 public class PosProduct extends BaseEntity {
 
     private static final long serialVersionUID = 1L;
     private Integer pid;
     private String pname;
-    private Float market_price;
-    private Float shop_price;
+    private Float marketPrice;
+    private Float shopPrice;
     private Integer inventory;
     private String image;
     private String pdesc;
-    private Integer is_hot;
+    private Integer isHot;
     private Date pdate;
-
-    private PosCategorySecond categorySecond;
+    private PosCategory category;
 
 
 }

@@ -1,4 +1,4 @@
-package com.ruoyi.domain;
+package com.ruoyi.pos.domain;
 
 
 import com.ruoyi.common.core.domain.BaseEntity;

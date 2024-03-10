@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruoyi.pos.mapper.PosCategoryMapper">
+
+    <resultMap type="com.ruoyi.pos.domain.PosCategory" id="PosCategoryResult">
+        <id     property="cid"       column="cid"      />
+        <result     property="image"       column="image"      />
+        <result     property="cname"       column="cname"      />
+        <result     property="discount"       column="discount"      />
+        <result     property="privilegeTime"       column="privilege_Time"      />
+        <result     property="createBy"       column="createBy"      />
+        <result     property="updateBy"       column="updateBy"      />
+    </resultMap>
+	
+
+    
+    <select id="selectCategoryList"
+            parameterType="com.ruoyi.pos.domain.PosCategory"
+			resultMap="PosCategoryResult">
+		SELECT * FROM `pos_category`
+	</select>
+	
+
+	
+</mapper> 

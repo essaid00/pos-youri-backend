@@ -1,4 +1,4 @@
-package com.ruoyi.domain;
+package com.ruoyi.pos.domain;
 
 import com.ruoyi.common.core.domain.BaseEntity;
 
@@ -14,7 +14,7 @@ public class PosOrderItem extends BaseEntity {
     private Float subtotal;
 
 
-    private Product product;
+    private PosProduct product;
 
 
 }

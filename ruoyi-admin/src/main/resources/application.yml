@@ -19,7 +19,7 @@ server:
   port: 8080
   servlet:
     # 应用的访问路径
-    context-path: /
+    context-path: /api
   tomcat:
     # tomcat的URI编码
     uri-encoding: UTF-8
@@ -68,7 +68,7 @@ spring:
   # redis 配置
   redis:
     # 地址
-    host: 110.0.53.14
+    host: localhost
     # 端口，默认为6379
     port: 6379
     # 数据库索引
@@ -126,4 +126,4 @@ xss:
   # 排除链接（多个用逗号分隔）
   excludes: /system/notice
   # 匹配链接
-  urlPatterns: /system/*,/monitor/*,/tool/*
+  urlPatterns: /system/*,/monitor/*,/tool/*,/pos/*
