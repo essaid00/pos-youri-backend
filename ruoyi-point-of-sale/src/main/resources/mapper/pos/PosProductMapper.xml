@@ -13,6 +13,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         <result     property="image"       column="image"      />
         <result     property="isHot"       column="isHot"      />
         <result     property="pdate"       column="pdate"      />
+        <result     property="idCategories"       column="id_Categories"      />
     </resultMap>
 	
 
@@ -22,7 +23,8 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 			resultMap="PosProductResult">
 		SELECT * FROM `pos_product`
 	</select>
-	
+    <select id="selectCategoriesById" resultType="com.ruoyi.pos.domain.PosProduct">
+        SELECT * FROM `pos_product` where id_Categories=#{categId}    </select>
 
-	
+
 </mapper> 

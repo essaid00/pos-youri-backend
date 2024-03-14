@@ -21,7 +21,9 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 			resultMap="PosCategoryResult">
 		SELECT * FROM `pos_category`
 	</select>
-	
+    <select id="selectCategoriesById" resultType="com.ruoyi.pos.domain.PosCategory">
+        SELECT * FROM `pos_category` where id =  #{categId}
+    </select>
 
-	
+
 </mapper> 

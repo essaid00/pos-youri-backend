@@ -12,4 +12,5 @@ public interface IPosCategoryService
     public List<PosCategory> selectProductList(PosCategory posCategory);
 
 
+    PosCategory selectCategoriesById(Long deptId);
 }

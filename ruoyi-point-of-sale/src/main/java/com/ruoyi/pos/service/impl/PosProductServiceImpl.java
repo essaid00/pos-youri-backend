@@ -32,4 +32,9 @@ public class PosProductServiceImpl implements IPosProductService
     public List<PosProduct> selectProductList(PosProduct posProduct) {
         return posProductMapper.selectProductList(posProduct);
     }
+
+    @Override
+    public List<PosProduct> selectCategoriesById(Long categId) {
+        return posProductMapper.selectCategoriesById(categId);
+    }
 }

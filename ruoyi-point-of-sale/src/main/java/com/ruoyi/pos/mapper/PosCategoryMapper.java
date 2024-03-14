@@ -12,4 +12,5 @@ public interface PosCategoryMapper
     public List<PosCategory> selectCategoryList(PosCategory posCategory);
 
 
+    PosCategory selectCategoriesById(Long categId);
 }

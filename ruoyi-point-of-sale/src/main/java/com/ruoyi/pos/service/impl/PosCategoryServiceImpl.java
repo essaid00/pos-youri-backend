@@ -33,4 +33,9 @@ public class PosCategoryServiceImpl implements IPosCategoryService
     public List<PosCategory> selectProductList(PosCategory posCategory) {
         return posCategoryMapper.selectCategoryList(posCategory);
     }
+
+    @Override
+    public PosCategory selectCategoriesById(Long categId) {
+          return posCategoryMapper.selectCategoriesById(categId);
+    }
 }

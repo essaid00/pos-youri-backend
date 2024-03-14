@@ -11,4 +11,5 @@ public interface PosProductMapper
     public List<PosProduct> selectProductList(PosProduct posProduct);
 
 
+    List<PosProduct> selectCategoriesById(Long categId);
 }

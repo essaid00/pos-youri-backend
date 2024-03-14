@@ -24,6 +24,7 @@ public class PosProduct extends BaseEntity {
     private String pdesc;
     private Integer isHot;
     private Date pdate;
+    private Integer idCategories;
     private PosCategory category;
 
 

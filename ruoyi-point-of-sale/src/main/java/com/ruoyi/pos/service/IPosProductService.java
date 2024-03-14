@@ -11,4 +11,5 @@ public interface IPosProductService
     public List<PosProduct> selectProductList(PosProduct posProduct);
 
 
+    List<PosProduct> selectCategoriesById(Long categId);
 }

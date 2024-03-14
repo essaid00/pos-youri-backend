@@ -1,13 +1,16 @@
 package com.ruoyi.web.controller.posofsale;
 
 import com.ruoyi.common.core.controller.BaseController;
+import com.ruoyi.common.core.domain.AjaxResult;
 import com.ruoyi.common.core.page.TableDataInfo;
 import com.ruoyi.pos.domain.PosCategory;
 import com.ruoyi.pos.domain.PosProduct;
 import com.ruoyi.pos.service.IPosCategoryService;
 import com.ruoyi.pos.service.IPosProductService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -22,12 +25,12 @@ import java.util.List;
 @RequestMapping("/pos/category")
 public class PosCategoryController extends BaseController
 {
-    /** 系统基础配置 */
+    /** service de categories */
     @Autowired
     private IPosCategoryService  posCategoryService;
 
     /**
-     * 访问首页，提示语
+     * lister tout les categories
      */
   //  @PreAuthorize("@ss.hasPermi('system:user:list')")
     @GetMapping("/list")
@@ -38,5 +41,15 @@ public class PosCategoryController extends BaseController
         return getDataTable(list);
     }
 
+    /**
+     * lister tout les categories par id
+     */
+
+    @GetMapping(value = "/{categId}")
+    public AjaxResult getInfo(@PathVariable Long categId)
+    {
+
+        return success(posCategoryService.selectCategoriesById(categId));
+    }
 
 }
